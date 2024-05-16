@@ -11,7 +11,12 @@ Created on Thu May 16 09:59:57 2024
 
 #path package to find the local virtual address where streamlit clones the github repo to
 
+import streamlit as st
+import altair as alt
 
+import sqlite3
+
+import sys
 
 
 ##from langchain.embeddings import OpenAIEmbeddings
