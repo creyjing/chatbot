@@ -37,14 +37,33 @@ from langchain.prompts import (
 
 import pandas as pd
 
+import os
+
+os.environ["PATH"] = r"C:\Users\j0\Downloads\WPy64-31090\python-3.10.9.amd64\Lib\site-packages\poppler-24.02.0\Library\bin;C:\Program Files\Tesseract-OCR"
+
+
 #  api_key for openai models
 ##create a folder named .streamlit in WPy64-31090, then create a txt file with openai=openaikey, then rename file to be a secrets.toml
+##may need to create ^ in scripts folder instead for wincommand to read 
 OPENAI_API_KEY = st.secrets["openaikey"]
 
 #locating local machine filepath address 
 
 #reference using  ./
 
+persist_directory = "chroma_db"
+
+# load embedding model to translate words into meaningful number vectors for LLM
+embeddings = OpenAIEmbeddings(
+    model="text-embedding-ada-002",
+    openai_api_key=OPENAI_API_KEY,
+)
+
+# loading previously stored vector database into memory
+vectordb = Chroma(persist_directory=persist_directory, embedding_function=embeddings)
+
+# defining retriever needed for the llm model, specifying retrieval from vector database
+retriever = vectordb.as_retriever()
 
 # function to load in vector database from local address
 def get_vectorstore():
