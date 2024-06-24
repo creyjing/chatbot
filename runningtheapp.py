@@ -19,10 +19,10 @@ import sqlite3
 import sys
 
 
-##from langchain.embeddings import OpenAIEmbeddings
-from langchain_community.chat_models import ChatOpenAI
+from langchain.embeddings import OpenAIEmbeddings
+##from langchain_community.chat_models import ChatOpenAI
 ##from langchain_community.vectorstores import Chroma
-from langchain_openai import OpenAIEmbeddings
+##from langchain_openai import OpenAIEmbeddings
 ###from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
