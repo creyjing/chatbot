@@ -19,7 +19,7 @@ import sqlite3
 import sys
 
 
-from langchain.embeddings import OpenAIEmbeddings
+##from langchain.embeddings import OpenAIEmbeddings
 ##from langchain_community.vectorstores import Chroma
 from langchain_openai import OpenAIEmbeddings
 from langchain.chat_models import ChatOpenAI
