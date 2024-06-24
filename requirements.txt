@@ -1,6 +1,6 @@
 path
 sqlite3 == 3.35.0
-pysqlite3-binary
+pysqlite3-binary ==0.4.1
 streamlit==1.18.1
 altair==5.1.1
 chroma-hnswlib==0.7.3
