@@ -1,0 +1,12 @@
+path
+pysqlite3-binary
+streamlit==1.18.1
+altair==5.1.1
+chroma-hnswlib==0.7.3
+chromadb==0.4.12
+langchain==0.0.292
+openai==0.28.0
+PyPDF2==3.0.1
+tiktoken==0.5.1
+
+
