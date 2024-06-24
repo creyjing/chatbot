@@ -8,5 +8,5 @@ langchain==0.0.292
 openai==0.28.0
 PyPDF2==3.0.1
 tiktoken==0.5.1
-
+langchain-openai==0.0.9
 
